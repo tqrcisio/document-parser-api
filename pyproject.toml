@@ -1,10 +1,14 @@
 [project]
 name = "document-parser-api"
 version = "0.1.0"
-description = "Add your description here"
+description = "This project is a API that allows you to convert documents to Markdown format. You can provide a document either by uploading a file or by specifying a URL."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "docling>=2.55.1",
     "python-multipart>=0.0.20",
 ]
+
+[project.scripts]
+start= "uvicorn main:app"
+dev= "uvicorn main:app --reload"
